@@ -159,8 +159,8 @@
 
 			#pragma multi_compile_instancing
 
-			#include "Inc/Forward/MKToonForwardBaseSetup.cginc"
-			#include "Inc/Forward/MKToonForward.cginc"
+			#include "Assets/3rdParty/_MK/MKToon/Shader/Inc/Forward/MKToonForwardBaseSetup.cginc"
+			#include "Assets/3rdParty/_MK/MKToon/Shader/Inc/Forward/MKToonForward.cginc"
 			
 			ENDCG
 		}
@@ -296,8 +296,8 @@
 
 			#pragma multi_compile_instancing
 
-			#include "/Inc/Outline/MKToonOutlineOnlySetup.cginc"
-			#include "/Inc/Outline/MKToonOutlineOnlyBase.cginc"
+			#include "Assets/3rdParty/_MK/MKToon/Shader/Inc/Outline/MKToonOutlineOnlySetup.cginc"
+			#include "Assets/3rdParty/_MK/MKToon/Shader/Inc/Outline/MKToonOutlineOnlyBase.cginc"
 			ENDCG 
 		}
     }
