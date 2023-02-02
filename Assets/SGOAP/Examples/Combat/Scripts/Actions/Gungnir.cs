@@ -1,13 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace SGoap
 {
-    public class Mjolnir : BasicAction
+    public class Gungnir : BasicAction
     {
         public float Range = 5f;
 
-        public override float CooldownTime => 5;
+        public override float CooldownTime => 10;
         public override float StaggerTime => 0.5f;
 
         public bool OutOfRange => AgentData.DistanceToTarget > Range;
@@ -20,18 +20,18 @@ namespace SGoap
 
             AgentData.Agent.transform.LookAt(AgentData.Target);
             AgentData.Animator.SetTrigger("Mjolnir");
-            var mjolnir = Instantiate(Skills.instance.mjolnir, GameManager.instance.player.transform.position,
-                Quaternion.Euler(new Vector3(90, 0, 0)));
-            Destroy(mjolnir,3f);
-            mjolnir.GetComponent<ParticleSystem>().Play();
+            var gungnir = Instantiate(Skills.instance.gungnir, GameManager.instance.player.transform.position,
+                Quaternion.Euler(new Vector3(0, 0, 0)));
+            Destroy(gungnir,3f);
+            gungnir.GetComponent<ParticleSystem>().Play();
             
             StartCoroutine(GiveDamage());
             IEnumerator GiveDamage()
             {
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.2f);
                 Debug.Log("Distance: " +
-                          Vector3.Distance(mjolnir.transform.position, GameManager.instance.player.transform.position));
-                if(Vector3.Distance(mjolnir.transform.position,GameManager.instance.player.transform.position) < 1f)
+                          Vector3.Distance(gungnir.transform.position, GameManager.instance.player.transform.position));
+                if(Vector3.Distance(gungnir.transform.position,GameManager.instance.player.transform.position) < 1f)
                     GameManager.instance.player.GetComponent<CharacterStatusController>().TakeDamage();
             }
 

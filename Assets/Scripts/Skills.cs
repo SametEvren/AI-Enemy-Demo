@@ -17,6 +17,6 @@ public class Skills : MonoBehaviour
     }
     #endregion
 
-    public GameObject mjolnir;
+    public GameObject mjolnir, gungnir;
 
 }

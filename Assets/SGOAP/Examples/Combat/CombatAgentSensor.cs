@@ -46,7 +46,7 @@ namespace SGoap
             FovTargetSystem.SetTarget(attacker as ITarget);
             FacingTargetDotProduct = (Vector3.Dot(_agentData.DirectionToTarget, _agentData.Agent.transform.forward) - 1) / 2;
 
-            var staggerTime = 1.0f;
+            var staggerTime = 0.5f;
             if (FacingTargetDotProduct >= 0.5f && Guarding)
                 staggerTime = 0.3f;
 

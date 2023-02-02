@@ -5,7 +5,7 @@
         public float Range = 2.5f;
 
         public override float CooldownTime => 2;
-        public override float StaggerTime => 1.5f;
+        public override float StaggerTime => .5f;
 
         public bool OutOfRange => AgentData.DistanceToTarget > Range;
         public bool AttackIsDone => !AgentData.Animator.GetBool("Attacking") && !Cooldown.Active;
