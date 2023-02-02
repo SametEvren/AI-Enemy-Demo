@@ -18,6 +18,7 @@ namespace SGoap
 
             foreach (var renderer in _renderers)
             {
+                if (!renderer.material.HasColor("_Color")) continue;
                 var color = renderer.material.color;
 
                 _materials.Add(renderer.material);
