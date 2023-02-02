@@ -1828,6 +1828,51 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1308840163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308840165}
+  - component: {fileID: 1308840164}
+  m_Layer: 0
+  m_Name: Skills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1308840164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308840163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e381449a8b1334f45894534b2292eb2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mjolnir: {fileID: 3584896083201515619, guid: 286e44ca67357e340869e72c92a1d428, type: 3}
+--- !u!4 &1308840165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308840163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.2154894, y: 0.61723185, z: 0.93136156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412040660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2171,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 468414452}
+--- !u!1 &1758229819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 470820644368043277, guid: 406c8ef6c7f830c4cbe05fec9fc7ad81, type: 3}
+  m_PrefabInstance: {fileID: 470820644554089213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1845705969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1845705970}
+  - component: {fileID: 1845705971}
+  m_Layer: 0
+  m_Name: Mjolnir
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1845705970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845705969}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8063347989624400948}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1845705971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845705969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a7e8e9bc7add543aa9360d63e009d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Mjolnir
+  Cost: 1
+  CostEvaluator: {fileID: 0}
+  UsableEvaluator: {fileID: 0}
+  AbortEvaluator: {fileID: 0}
+  PreConditions:
+  - KeyReference: {fileID: 11400000, guid: 0054fa0934226f249a546d017f4715d4, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  - KeyReference: {fileID: 11400000, guid: 17bfb786ddbfed347ba5707477920e8a, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  AfterEffects:
+  - KeyReference: {fileID: 11400000, guid: f282b2e05afc7fc42bef971efda5015f, type: 2}
+    Concatenator: {fileID: 0}
+    StateType: 0
+    Value: 0
+    StringValue: 
+    Operator: 0
+  CostEvaluationType: 0
+  AchievableEvaluationType: 0
+  AbortEvaluatorType: 0
+  Range: 5
 --- !u!1001 &1917361390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2271,6 +2394,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3808557071270877154, guid: 11adcb81fefdf204fbb80e64f173fb85, type: 3}
   m_PrefabInstance: {fileID: 3808557070850114006}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2088674164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088674166}
+  - component: {fileID: 2088674165}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2088674165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088674164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa17262b33a90a4eaee764a1cbea560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1758229819}
+  enemy: {fileID: 2106501942}
+--- !u!4 &2088674166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088674164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5089033, y: 0.8695366, z: -7.745532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2092980782 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5834446644971041406, guid: 406c8ef6c7f830c4cbe05fec9fc7ad81, type: 3}
@@ -9273,7 +9442,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.79
-  m_Speed: 2
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -10260,7 +10429,9 @@ MonoBehaviour:
   FovTargetSystem: {fileID: 2540995049199154875}
   Status: {fileID: 1375403038653311394}
   InMeleeRangeState: {fileID: 11400000, guid: 8895dad195c2d90449984ef35b15ea3e, type: 2}
+  InMagicRangeState: {fileID: 11400000, guid: 17bfb786ddbfed347ba5707477920e8a, type: 2}
   MeleeRange: 2
+  MagicRange: 5
   FacingTargetDotProduct: 0
 --- !u!4 &4136787429872720069
 Transform:
@@ -11480,7 +11651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Chase-To-Dash
-  Cost: 4.1928663
+  Cost: 4.9206142
   CostEvaluator: {fileID: 2901525545205121598}
   UsableEvaluator: {fileID: 0}
   AbortEvaluator: {fileID: 0}
@@ -12363,6 +12534,7 @@ Transform:
   - {fileID: 1770202543600105152}
   - {fileID: 4997693519827253598}
   - {fileID: 5488444424461343972}
+  - {fileID: 1845705970}
   m_Father: {fileID: 5787694987058539118}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12446,7 +12618,7 @@ MonoBehaviour:
     Priority: 1
     Once: 0
   PlannerSettings:
-    PlanRate: 1
+    PlanRate: 5
     CanAbortPlans: 0
     GenerateGoalReport: 0
     GenerateFailedPlansReport: 0

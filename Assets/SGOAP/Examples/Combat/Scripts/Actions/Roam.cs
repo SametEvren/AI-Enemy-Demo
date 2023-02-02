@@ -35,7 +35,7 @@ namespace SGoap
         public override bool PrePerform()
         {
             _speed = NavMeshAgent.speed;
-            NavMeshAgent.speed = 0.75f;
+            //NavMeshAgent.speed = 0.75f;
             return base.PrePerform();
         }
 
@@ -56,7 +56,7 @@ namespace SGoap
         public override bool PostPerform()
         {
             NavMeshAgent.isStopped = true;
-            NavMeshAgent.speed = _speed;
+            //NavMeshAgent.speed = _speed;
             AgentData.Animator.SetFloat("MoveVelocity", 0);
             States.SetState("hasTarget", 1);
             return base.PostPerform();

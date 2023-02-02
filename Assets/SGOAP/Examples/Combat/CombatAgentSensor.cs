@@ -9,7 +9,9 @@ namespace SGoap
         public CharacterStatusController Status;
 
         public StringReference InMeleeRangeState;
+        public StringReference InMagicRangeState;
         public float MeleeRange = 2;
+        public float MagicRange = 5;
         public float FacingTargetDotProduct;
 
         public bool Guarding => _agentData.Animator.GetBool("Guarding");
@@ -28,6 +30,11 @@ namespace SGoap
                 return;
 
             // The distance to the target is greater than your melee, out of range
+            if(_agentData.DistanceToTarget > MeleeRange && _agentData.DistanceToTarget < MagicRange)
+                States.SetState(InMagicRangeState.Value, 1);
+            else
+                States.RemoveState(InMagicRangeState.Value);
+            
             if (_agentData.DistanceToTarget < MeleeRange)
                 States.SetState(InMeleeRangeState.Value, 1);
             else
